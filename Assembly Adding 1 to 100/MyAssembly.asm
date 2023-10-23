@@ -15,18 +15,32 @@ doit proc
 	; eax will store the accumalation (sum)
 	; ecx will store the count
 
-	; 1 + 2 + 3		; result 6
+	; ----- add 1 + 2 + 3 -----		; result 6
+;
+;	move eax, 0
+;	move ecx, 1
+;again:
+;	add eax, ecx
+;	inc ecx
+;	cmp ecx, 3		; increment to 6
+;	jle again		; jump lessthan/equalto
+;
+;	; add 1 + 2 + 3		; result 6
+;
+;	ret				; result 6  will ret bec -> not jle -> cmp ecx, 3
+
+	; ----- add 1 to 100 --------
 
 	move eax, 0
 	move ecx, 1
 again:
 	add eax, ecx
 	inc ecx
-	cmp ecx, 3
+	cmp ecx, 100	; increment to 100
 	jle again		; jump lessthan/equalto
 
 
-	ret			; result 6  will ret bec -> not jle -> cmp ecx, 3
+	ret			
 
 	; ----------- Assembly Multiple Branches --------------
 	; combining conditional/unconditional branching statements
