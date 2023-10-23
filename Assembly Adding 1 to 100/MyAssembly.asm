@@ -13,7 +13,14 @@ doit proc
 	; ----------- Assembly Adding 1 to 100 -----------------
 
 	; eax will store the accumalation (sum)
-	; ecx will store the Count
+	; ecx will store the count
+	move eax, 0
+	move ecx, 1
+again:
+	add eax, ecx
+	inc ecx
+	cmp ecx, 3
+	jle again
 
 
 	ret
