@@ -15,7 +15,7 @@ doit proc
 	; eax will store the accumalation (sum)
 	; ecx will store the count
 
-	; 1 + 2 + 3
+	; 1 + 2 + 3		; result 6
 
 	move eax, 0
 	move ecx, 1
@@ -26,7 +26,7 @@ again:
 	jle again		; jump lessthan/equalto
 
 
-	ret
+	ret			; result 6  will ret bec -> not jle -> cmp ecx, 3
 
 	; ----------- Assembly Multiple Branches --------------
 	; combining conditional/unconditional branching statements
