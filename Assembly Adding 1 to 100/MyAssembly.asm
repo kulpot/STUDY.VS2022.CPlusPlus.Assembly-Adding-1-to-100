@@ -14,13 +14,16 @@ doit proc
 
 	; eax will store the accumalation (sum)
 	; ecx will store the count
+
+	; 1 + 2 + 3
+
 	move eax, 0
 	move ecx, 1
 again:
 	add eax, ecx
 	inc ecx
 	cmp ecx, 3
-	jle again
+	jle again		; jump lessthan/equalto
 
 
 	ret
